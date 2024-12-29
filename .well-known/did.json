@@ -1,0 +1,48 @@
+{
+  "id": "did:web:did.woodgrove-onboarding.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:did.woodgrove-onboarding.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://did.woodgrove-onboarding.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/82d27c7e-6ab0-48ee-b426-e98ebead9707"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#90ca011a7f334bcd8b521e04e3506dd8vcSigningKey-62d15",
+      "controller": "did:web:did.woodgrove-onboarding.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "biuPiJwIvhUmNso67Vjji6x5xEyH2JpFmW34OD9RIII",
+        "y": "6VKLEaixBLW_sruFTfY0HDOLWi54KpE-grm-G8Kw38U"
+      }
+    }
+  ],
+  "authentication": [
+    "#90ca011a7f334bcd8b521e04e3506dd8vcSigningKey-62d15"
+  ],
+  "assertionMethod": [
+    "#90ca011a7f334bcd8b521e04e3506dd8vcSigningKey-62d15"
+  ]
+}
